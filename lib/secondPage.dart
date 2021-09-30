@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'playScreen.dart';
 
 class SecondPage extends StatefulWidget {
   @override
@@ -128,6 +129,13 @@ class MusicCo extends StatelessWidget {
                     ),
                     Center(
                       child: FlatButton(
+                        onPressed: () {
+                          showModalBottomSheet(
+                            isScrollControlled: true,
+                            context: context,
+                            builder: (context) => PlayScreen(),
+                          );
+                        },
                         child: Container(
                           width: 30.0,
                           height: 30.0,
